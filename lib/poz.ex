@@ -1,11 +1,11 @@
 defmodule Poz do
   def select do
-    items = Enum.to_list (1..100)
+    items = Enum.to_list (1..1000)
     :timer.sleep(:rand.uniform(100))
     Progress.incr(:select, length(items))
     items
   end
-  
+
   def download(index) do
     :timer.sleep(:rand.uniform(100))
     Progress.incr(:download)
